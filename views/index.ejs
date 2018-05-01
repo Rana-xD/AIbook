@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+		<link rel='stylesheet' href='/stylesheets/normalize.css' />
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body>
+		<div class="page_wrapper">
+        	<div class="content_box">
+            <div class="search_box_wrapper">
+               <div class="inner">
+                  <div class="clearfix">
+                     <div class="logo_wrapper">
+                        <img class="logo" src="/images/bot.png" alt="logo">
+                     </div>
+                     <div class="search_box">
+                        <form action="" method="POST" id="interactionForm">
+                        	<input type="hidden" id="csrftoken" name="_csrf" value="<%= csrfToken %>">
+                           <div class="outter">
+                              <input type="text" name="search" id="questionInput" class="search_input">
+                              <div class="icon_search"></div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        	</div>
+        	<div class="content_box">
+        		<div id="resultBox">
+        			
+        		</div>
+        	</div>
+    	</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+	<script src="/javascripts/utils.js"></script>
+	<script src="/javascripts/main.js"></script>
+</html>
